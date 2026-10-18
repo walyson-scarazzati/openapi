@@ -11,4 +11,23 @@ info:
     name: EazyShop License
     url: https://www.eazyshop.com/licenses/LICENSE-2.0.html
   version: 0.0.1
+servers:
+  - url: https://development.eazyshop-server.com/v1
+    description: Development server
+  - url: https://staging.eazyshop-server.com/v1
+    description: Staging server
+  - url: https://api.eazyshop-server.com/v1
+    description: Production server
+  - url: https://{username}.server.com:{port}/{version}
+    variables:
+      username:
+        default: demo
+        description: This value is assigned by the service provider.
+      port:
+        enum:
+          - "8443"
+          - "443"
+        default: "8443"
+      version:
+        default: v1
 paths: {}
