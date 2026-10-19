@@ -40,3 +40,26 @@
 - Prism Mock server - https://stoplight.io/open-source/prism
 - SWAPI The Star Wars API - https://swapi.dev/
 - REQRES Mock APIs - https://reqres.in
+
+# Run Swagger UI and Swagger Editor with Docker Compose
+
+The Compose file starts Swagger UI and Swagger Editor with `openapi_01.yml`
+loaded. Swagger Generator is the code-generation API used by tools; it is not
+a browser interface.
+
+```sh
+docker compose up -d
+```
+
+- Swagger UI: http://localhost:8080
+- Swagger Editor (carrega a especificação): http://localhost:8081/?url=/openapi_01.yml
+- Swagger Generator API: http://localhost:8082
+
+The OpenAPI file is mounted read-only into both UI containers. The
+`swaggerapi/swagger-generator` image provides the Swagger 2 code-generation
+API; it does not generate clients from this OpenAPI 3.1 document. Stop the
+services with:
+
+```sh
+docker compose down
+```
