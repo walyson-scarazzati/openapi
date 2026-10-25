@@ -64,3 +64,38 @@ paths:
           description: Unauthorized
         '500':
           description: Internal Server Error
+    
+  /categories/{categoryId}:
+      get:
+        summary: Get a category by ID
+        description: Returns a single category based on the provided ID.
+        parameters:
+          - name: categoryId
+            in: path
+            required: true
+            schema:
+              type: integer
+              minimum: 100
+              maximum: 1000
+            example: 101
+        responses:
+          '200':
+            description: A single category.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    categotyId:
+                      type: integer
+                    name:
+                      type: string
+
+          '400':
+            description: Bad Request
+          '401':
+            description: Unauthorized
+          '404':
+            description: Category not found
+          '500':
+            description: Internal Server Error
