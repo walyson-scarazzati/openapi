@@ -4,6 +4,8 @@
 
 **'OpenAPI Specification & Swagger Tools - Zero To Master'** course will help in understanding about Open API Specification and how to describe, document APIs using OpenAPI & Swagger tools.
 
+Github: https://github.com/eazybytes/openapi 
+
 ## Topics covered in the course
 
 1) Designing APIs with OpenAPI Specifications and Swagger Tools
