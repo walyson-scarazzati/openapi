@@ -267,4 +267,49 @@ paths:
             type: integer
       responses:
         '204':
-          description: Order details cancelled successfullyz
+          description: Order details cancelled successfully
+    get:
+      summary: Get Order Details
+      description: Get order details from EazyShop
+      parameters:
+        - name: orderId
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Fetch Order details successfully
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  orderId:
+                    type: integer
+                  products:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        productId:
+                          type: integer
+                        name:
+                         type: string
+                        price:
+                          type: number
+                        categoryName:
+                          type: string
+                        quantity:
+                          type: integer
+                  address:
+                    type: object
+                    properties:
+                      addressLine:
+                        type: string
+                      city:
+                        type: string
+                      state:
+                        type: string
+                      zipcode:
+                        type: string
