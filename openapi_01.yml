@@ -256,3 +256,15 @@ paths:
       responses:
         "200":
           description: Order details updated successfully
+    delete:
+      summary: Delete Order
+      description: Delete order details from EazyShop
+      parameters:
+        - name: orderId
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Order details cancelled successfullyz
