@@ -166,7 +166,7 @@ paths:
                   value:
                     - productId: 101
                       name: Apple IPhone 13 Pro
-                      price: 999.00
+                      price: 999.99
                       categoryName: Mobiles
                       quantity: 96
                     - productId: 102
@@ -318,6 +318,7 @@ components:
           type: string
         price:
           type: number
+          format: float
         categoryName:
           type: string
         quantity:
