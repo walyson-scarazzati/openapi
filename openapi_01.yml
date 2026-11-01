@@ -331,6 +331,7 @@ components:
         releaseDate:
           type: string
           format: date
+          readOnly: true
     Category:
       type: object
       properties:
