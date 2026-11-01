@@ -52,7 +52,16 @@ paths:
             type: integer
             minimum: 100
             maximum: 1000
-          example: 101
+          examples:
+            mobiles:
+              summary: Use this example for mobiles
+              value: 101
+            laptops:
+              value: 102
+            headphones:
+              value: 103
+            televisions:
+              value: 104
       responses:
         "200":
           description: A list of categories.
@@ -67,6 +76,23 @@ paths:
                       type: integer
                     name:
                       type: string
+              examples:
+                all-categories-data:
+                  summary: Categories example data
+                  value:
+                    - categoryId: 101
+                      name: Mobiles
+                    - categoryId: 102
+                      name: Laptops
+                    - categoryId: 103
+                      name: Headphones
+                    - categoryId: 104
+                      name: Televisions
+                single-category-data:
+                  summary: Single category example data
+                  value:
+                    - categoryId: 101
+                      name: Mobiles
 
         "400":
           description: Bad Request
@@ -144,6 +170,25 @@ paths:
                       type: integer
                       description: |
                           ***Quantity*** represents `stock` value when this field is being sent by EazyShop.Where as in the scenarios of consumer sending this feild, it represents `number of product items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
+              examples:
+                products-data:
+                  summary: Products example data
+                  value:
+                    - productId: 101
+                      name: Apple IPhone 13 Pro
+                      price: 999.00
+                      categoryName: Mobiles
+                      quantity: 96
+                    - productId: 102
+                      name: Samsung S22 Ultra
+                      price: 899.00
+                      categoryName: Mobiles
+                      quantity: 121
+                    - productId: 103
+                      name: OnePlus 10 Pro 5G
+                      price: 750.00
+                      categoryName: Mobiles
+                      quantity: 67
   /products/{productId}:
     get:
       summary: Return product details
