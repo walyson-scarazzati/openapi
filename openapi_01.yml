@@ -142,6 +142,8 @@ paths:
                       type: string
                     quantity:
                       type: integer
+                      description: |
+                          ***Quantity*** represents `stock` value when this field is being sent by EazyShop.Where as in the scenarios of consumer sending this feild, it represents `number of product items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
   /products/{productId}:
     get:
       summary: Return product details
@@ -174,6 +176,8 @@ paths:
                     type: string
                   quantity:
                     type: integer
+                    description: |
+                          ***Quantity*** represents `stock` value when this field is being sent by EazyShop.Where as in the scenarios of consumer sending this feild, it represents `number of product items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
   /orders:
     post:
       summary: Create Order
@@ -201,6 +205,8 @@ paths:
                         type: string
                       quantity:
                         type: integer
+                        description: |
+                          ***Quantity*** represents `stock` value when this field is being sent by EazyShop.Where as in the scenarios of consumer sending this feild, it represents `number of product items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
                 address:
                   type: object
                   properties:
@@ -312,6 +318,8 @@ paths:
                           type: string
                         quantity:
                           type: integer
+                          description: |
+                           ***Quantity*** represents `stock` value when this field is being sent by EazyShop.Where as in the scenarios of consumer sending this feild, it represents `number of product items` inside the order. Consumers are expected to handle the scenario of stopping the end user <u>*when the stock value is 0*</u>
                   address:
                     type: object
                     properties:
