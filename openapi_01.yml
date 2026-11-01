@@ -1,7 +1,17 @@
 openapi: 3.1.0
 info:
   title: EasyShop Products APIs Specification
-  description: Using this OpenAPI specification, any consumer can understand the APIs that are exposed by EazyShop
+  description: |
+      # About Us
+      **EazyShop** is a open market product selling company. Any website can list our products by  using our _APIs_. Shipping & other logistics will be taken care by us. You will get an `Affiliate commision` for selling our products.
+      # Categories suported
+        - Mobiles
+          - Apple
+          - Samsung
+          - OnePlus
+        - Laptops
+        - Televisions
+        - Headphones
   termsOfService: https://eazyshop.com/terms/
   contact:
     name: API Support
