@@ -307,6 +307,10 @@ components:
           type: string
         state:
           type: string
+          enum:
+            - "California"
+            - "Texas"
+            - "Florida"
         zipcode:
           type: string
         isOfficeAddress:
