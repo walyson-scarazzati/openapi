@@ -289,6 +289,31 @@ paths:
                       $ref: '#/components/schemas/Product'
                   address:
                     $ref: '#/components/schemas/Address'
+  /oneOfOrder:
+    post:
+      tags:
+      - Orders
+      summary: Insert OneOf the Order Details
+      description: Insert OneOf the Order Details into Eazyshop
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                products:
+                  type: object
+                  oneOf:
+                    - $ref: '#/components/schemas/Mobile'
+                    - $ref: '#/components/schemas/Laptop'
+                address:
+                  $ref: '#/components/schemas/Address'
+              required:
+                - products
+                - address
+      responses:
+        '200':
+          description: Order placed successfully
 components:
   parameters:
     orderIdQueryParam:
@@ -354,7 +379,7 @@ components:
                 - "4G"
                 - "5G"
           required: [networkType]
-    Notebook:
+    Laptop:
       allOf:
         - $ref: '#/components/schemas/Product'
         - type: object
