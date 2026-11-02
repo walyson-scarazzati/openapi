@@ -90,9 +90,15 @@
                             <inputSpec>${openapi.spec.path}</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
+                            <output>${project.basedir}</output>
                             <apiPackage>org.openapitools.api</apiPackage>
                             <modelPackage>org.openapitools.model</modelPackage>
                             <invokerPackage>org.openapitools</invokerPackage>
+                            <generateApiTests>false</generateApiTests>
+                            <generateModelTests>false</generateModelTests>
+                            <generateApiDocumentation>false</generateApiDocumentation>
+                            <generateModelDocumentation>false</generateModelDocumentation>
+                            <supportingFilesToGenerate>OpenApiGeneratorApplication.java,RFC3339DateFormat.java,SpringDocConfiguration.java,HomeController.java,ApiUtil.java,application.properties</supportingFilesToGenerate>
                             <configOptions>
                                 <useSpringBoot3>true</useSpringBoot3>
                                 <interfaceOnly>false</interfaceOnly>
