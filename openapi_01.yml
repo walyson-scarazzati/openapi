@@ -28,6 +28,9 @@ info:
     name: EazyShop License
     url: https://www.eazyshop.com/licenses/LICENSE-2.0.html
   version: 0.0.1
+externalDocs:
+  description: External Documentation
+  url: https://example.com
 servers:
   - url: https://development.eazyshop-server.com/v1
     description: Development server
