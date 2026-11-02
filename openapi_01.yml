@@ -73,6 +73,8 @@ paths:
       summary: List all categories
       description: Returns a list of all categories supported by EazyShop.
       operationId: getCategories
+      security:
+        - BasicAuth: []
       parameters:
         - name: categoryId
           in: query
@@ -131,6 +133,7 @@ paths:
       summary: Get a category by ID
       description: Returns a single category based on the provided ID.
       operationId: getCategoryDetails
+      security: []
       parameters:
         - name: categoryId
           in: path
