@@ -54,6 +54,7 @@ paths:
         - Categories
       summary: List all categories
       description: Returns a list of all categories supported by EazyShop.
+      operationId: getCategories
       parameters:
         - name: categoryId
           in: query
@@ -111,6 +112,7 @@ paths:
         - Categories
       summary: Get a category by ID
       description: Returns a single category based on the provided ID.
+      operationId: getCategoryDetails
       parameters:
         - name: categoryId
           in: path
@@ -143,6 +145,7 @@ paths:
       summary: List all products
       description: |
         Returns the list of products supported by EazyShop
+      operationId: getProducts
       parameters:
         - name: categoryId
           in: query
@@ -186,6 +189,7 @@ paths:
       summary: Return product details
       description: |
         Returns the product details from  EazyShop
+      operationId: getProductDetails
       parameters:
         - name: productId
           in: path
@@ -210,6 +214,7 @@ paths:
       description: |
         Post order details to EazyShop for processing
         and shipping
+      operationId: saveOrderDetails
       requestBody:
         content:
           application/json:
@@ -239,6 +244,7 @@ paths:
       description: |
         Update order details to EazyShop for processing
         and shipping
+      operationId: updateOrderDetails
       requestBody:
         content:
           application/json:
@@ -261,6 +267,7 @@ paths:
         - Orders
       summary: Delete Order
       description: Delete order details from EazyShop
+      operationId: deleteOrderDetails
       parameters:
         - $ref: '#/components/parameters/orderIdQueryParam'
       responses:
@@ -271,6 +278,7 @@ paths:
         - Orders
       summary: Get Order Details
       description: Get order details from EazyShop
+      operationId: getOrderDetails
       parameters:
         - $ref: '#/components/parameters/orderIdQueryParam'
       responses:
@@ -289,12 +297,14 @@ paths:
                       $ref: '#/components/schemas/Product'
                   address:
                     $ref: '#/components/schemas/Address'
+  
   /oneOfOrder:
     post:
       tags:
       - Orders
       summary: Insert OneOf the Order Details
       description: Insert OneOf the Order Details into Eazyshop
+      operationId: demoOfOneOf
       requestBody:
         content:
           application/json:
@@ -320,6 +330,7 @@ paths:
       - Orders
       summary: Get Order Details
       description: Get Order Details based on Order ID
+      operationId: demoOfAnyOf
       parameters:
         - $ref: "#/components/parameters/orderIdQueryParam"
         - name: fetchType
@@ -348,6 +359,12 @@ components:
     orderIdQueryParam:
       name: orderId
       in: query
+      required: true
+      schema:
+        type: integer
+    orderIdPathParam:
+      name: orderId
+      in: path
       required: true
       schema:
         type: integer
