@@ -8,6 +8,9 @@ Github: [Repository][github-repo-url]
 
 Course: [Udemy Course][udemy-course-url]
 
+Swagger Project: https://walyson-scarazzati.github.io/openapi/
+
+
 ## Topics covered in the course
 
 1) Designing APIs with OpenAPI Specifications and Swagger Tools
